@@ -34,6 +34,11 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
+  },
+
+  '/generator': {
+    controller: 'PageController',
+    action: 'generator'
   }
 
   /***************************************************************************

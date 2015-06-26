@@ -1,0 +1,43 @@
+<div>
+  Select type of file to be generated: <br>
+  <select id='fileType'>
+    <% for(var i=0; i<fileTypes.length; i++) { %>
+      <option value= <%= fileTypes[i].id %> ><%= fileTypes[i].name %></option>
+    <% } %>
+  </select>
+</div>
+
+<div id='mainForm'>
+</div>
+
+<div id='1stPresentmentForm' class='forms'>
+  Transaction Code:
+  <select id='transactionCode'>
+    <% for(var i=0; i<transactionCodes['01'].length; i++) { %>
+      <option value= <%= transactionCodes['01'][i].code %> ><%= transactionCodes['01'][i].name %></option>
+    <% } %>
+  </select>
+</div>
+
+<div id='ChargebackForm' class='forms'>
+  Transaction Code:
+  <select id='transactionCode'>
+    <% for(var i=0; i<transactionCodes['02'].length; i++) { %>
+      <option value= <%= transactionCodes['02'][i].code %> ><%= transactionCodes['02'][i].name %></option>
+    <% } %>
+  </select>
+</div>
+
+<div id='RepresentmentForm' class='forms'>
+  Transaction Code:
+  <select id='transactionCode'>
+    <% for(var i=0; i<transactionCodes['03'].length; i++) { %>
+      <option value= <%= transactionCodes['03'][i].code %> ><%= transactionCodes['03'][i].name %></option>
+    <% } %>
+  </select>
+</div>
+
+<div>
+  <button id='add'>Add</button>
+  <button id='generate'>Generate</button>
+</div>
