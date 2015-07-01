@@ -1,0 +1,62 @@
+[  
+  {
+    "code": "05",
+    "name": "05 (Sales Draft)",
+    "type": "presentment"
+  },
+  {
+    "code": "06",
+    "name": "06 (Credit Voucher)",
+    "type": "presentment"
+  },
+  {
+    "code": "07",
+    "name": "07 (Cash Disbursement)",
+    "type": "presentment"
+  },
+  {
+    "code": "15",
+    "name": "15 (Sales Draft Chargeback)",
+    "type": "chargeback"
+  },
+  {
+    "code": "16",
+    "name": "16 (Credit Voucher Chargeback)",
+    "type": "chargeback"
+  },
+  {
+    "code": "17",
+    "name": "17 (Cash Disbursement Chargeback)",
+    "type": "chargeback"
+  },
+  {
+    "code": "25",
+    "name": "25 (Sales Draft Reversal)",
+    "type": "presentment"
+  },
+  {
+    "code": "26",
+    "name": "26 (Cash Voucher Reversal)",
+    "type": "presentment"
+  },
+  {
+    "code":"27",
+    "name": "27 (Cash Disbursement Reversal)",
+    "type": "presentment"
+  },
+  {
+    "code": "35",
+    "name": "35 (Sales Draft Chargeback Reversal)",
+    "type": "chargeback"
+  },
+  {
+    "code": "36",
+    "name": "36 (Credit Voucher Chargeback Reversal)",
+    "type": "chargeback"
+  },
+  {
+    "code": "37",
+    "name": "37 (Cash Disbursement Chargeback Reversal)",
+    "type": "chargeback"
+  }
+]

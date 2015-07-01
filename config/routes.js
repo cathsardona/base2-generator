@@ -32,14 +32,20 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
+  'GET /': {
     view: 'homepage'
   },
 
-  '/generator': {
+  'GET /generator': {
     controller: 'PageController',
     action: 'generator'
-  }
+  },
+
+  'GET /v1/transactioncodes': {
+    controller: 'TransactionCodeController',
+    action: 'list'
+  },
+
 
   /***************************************************************************
   *                                                                          *
