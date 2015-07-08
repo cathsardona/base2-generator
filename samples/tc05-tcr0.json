@@ -1,0 +1,41 @@
+{
+  "transactions": [
+    {
+      "transCode": "05",
+      "transCodeQualifier": "0",
+      "transCompSeqNum": "0",
+      "accntNum": "4761340000000019",
+      "accntNumExt": "000",
+      "floorLimitIndicator": " ",
+      "crb": " ",
+      "pcasIndicator": " ",
+      "acqRefNum": "74007845156000000001238",
+      "acqBusId": "00000000",
+      "purchaseDate": "0604",
+      "destAmt": "000000000000",
+      "destCurrCode": "   ",
+      "sourceAmt": "000000005000",
+      "sourceCurrCode": "608",
+      "merchantName": "COQUIA ENTERPRISES       ",
+      "merchantCity": "QUEZON CITY  ",
+      "merchantCountryCode": "PH ",
+      "merchantCategoryCode": "8999",
+      "merchantZipCode": "00000",
+      "merchantState": "   ",
+      "requestedPaymentService": " ",
+      "numOfPaymentForms": " ",
+      "usageCode": "1",
+      "reasonCode": "00",
+      "settlementFlag": "9",
+      "authCharIndicator": " ",
+      "authCode": "712125",
+      "posTerminalCapability": " ",
+      "intlFeeIndicator": " ",
+      "cardholderIdMethod": " ",
+      "collectionOnlyFlag": " ",
+      "posEntryMode": "90",
+      "centralProcessDate": "0000",
+      "reimbursementAttribute": "0"
+    }
+  ]
+}

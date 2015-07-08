@@ -1,43 +1,155 @@
-<div>
-  Select type of file to be generated: <br>
-  <select id='fileType'>
-    <% for(var i=0; i<fileTypes.length; i++) { %>
-      <option value= <%= fileTypes[i].id %> ><%= fileTypes[i].name %></option>
-    <% } %>
-  </select>
+<div id='mainArea'>
 </div>
 
-<div id='mainForm'>
-</div>
+<button type='button' id='addTCR0' class='btn btn-primary'>Add TCR0</button>
+<button type='button' id='addTCR1' class='btn btn-primary'>Add TCR1</button>
+<button type='button' id='addTCR5' class='btn btn-primary'>Add TCR5</button>
 
-<div id='1stPresentmentForm' class='forms'>
-  Transaction Code:
-  <select id='transactionCode'>
-    <% for(var i=0; i<transactionCodes['01'].length; i++) { %>
-      <option value= <%= transactionCodes['01'][i].code %> ><%= transactionCodes['01'][i].name %></option>
-    <% } %>
-  </select>
-</div>
-
-<div id='ChargebackForm' class='forms'>
-  Transaction Code:
-  <select id='transactionCode'>
-    <% for(var i=0; i<transactionCodes['02'].length; i++) { %>
-      <option value= <%= transactionCodes['02'][i].code %> ><%= transactionCodes['02'][i].name %></option>
-    <% } %>
-  </select>
-</div>
-
-<div id='RepresentmentForm' class='forms'>
-  Transaction Code:
-  <select id='transactionCode'>
-    <% for(var i=0; i<transactionCodes['03'].length; i++) { %>
-      <option value= <%= transactionCodes['03'][i].code %> ><%= transactionCodes['03'][i].name %></option>
-    <% } %>
-  </select>
-</div>
-
-<div>
-  <button id='add'>Add</button>
-  <button id='generate'>Generate</button>
+<div class='tcr0 forms'>
+  <form class='form-inline'>
+    <div class='form-group'>
+      <label for='transCode'>Transaction Code</label>
+      <input type='text' class='form-control' id='transCode' placeholder='XX' maxlength='2'>
+    </div>
+    <div class='form-group'>
+      <label for='transCodeQualifier'>Transaction Code Qualifier</label>
+      <input type='text' class='form-control' id='transCodeQualifier' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <input type='hidden' class='form-control' id='transCodeSeqNum' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='acctNum'>Account Number</label>
+      <input type='text' class='form-control' id='acctNum' placeholder='XXXXXXXXXXXXXXXX' maxlength='16'>
+    </div>
+    <div class='form-group'>
+      <label for='acctNumExt'>Account Number Extension</label>
+      <input type='text' class='form-control' id='acctNumExt' placeholder='XXX' maxlength='3'>
+    </div>
+    <div class='form-group'>
+      <label for='floorLimitIndicator'>Floor Limit Indicator</label>
+      <input type='text' class='form-control' id='floorLimitIndicator' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='crb'>CRB/Exception File Indicator</label>
+      <input type='text' class='form-control' id='crb' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='pcasIndicator'>Positive Cardholder Authorization Service (PCAS) Indicator</label>
+      <input type='text' class='form-control' id='pcasIndicator' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='pcasIndicator'>Positive Cardholder Authorization Service (PCAS) Indicator</label>
+      <input type='text' class='form-control' id='pcasIndicator' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='acqRefNum'>Acquirer Reference Number</label>
+      <input type='text' class='form-control' id='acqRefNum' placeholder='XXXXXXXXXXXXXXXXXXXXXX' maxlength='23'>
+    </div>
+    <div class='form-group'>
+      <label for='acqBusId'>Acquirer's Business ID</label>
+      <input type='text' class='form-control' id='acqBusId' placeholder='XXXXXXXX' maxlength='8'>
+    </div>
+    <div class='form-group'>
+      <label for='purchaseDate'>Purchase Date (MMDD)</label>
+      <input type='text' class='form-control' id='purchaseDate' placeholder='XXXX' maxlength='4'>
+    </div>
+    <div class='form-group'>
+      <label for='destAmt'>Destination Amount</label>
+      <input type='text' class='form-control' id='destAmt' placeholder='XXXXXXXXXXXX' maxlength='12'>
+    </div>
+    <div class='form-group'>
+      <label for='destCurrCode'>Destination Currency Code</label>
+      <input type='text' class='form-control' id='destCurrCode' placeholder='XXX' maxlength='3'>
+    </div>
+    <div class='form-group'>
+      <label for='sourceAmt'>Source Amount</label>
+      <input type='text' class='form-control' id='sourceAmt' placeholder='XXXXXXXXXXXX' maxlength='12'>
+    </div>
+    <div class='form-group'>
+      <label for='sourceCurrCode'>Souce Currency Code</label>
+      <input type='text' class='form-control' id='sourceCurrCode' placeholder='XXX' maxlength='3'>
+    </div>
+    <div class='form-group'>
+      <label for='merchantName'>Merchant Name</label>
+      <input type='text' class='form-control' id='merchantName' placeholder='XXXXXXXXXXXXXXXXXXXXXXXXX' maxlength='25'>
+    </div>
+    <div class='form-group'>
+      <label for='merchantCity'>Merchant City</label>
+      <input type='text' class='form-control' id='merchantCity' placeholder='XXXXXXXXXXXX' maxlength='13'>
+    </div>
+    <div class='form-group'>
+      <label for='merchantCountryCode'>Merchant Country Code</label>
+      <input type='text' class='form-control' id='merchantCountryCode' placeholder='XXX' maxlength='3'>
+    </div>
+    <div class='form-group'>
+      <label for='merchantCategoryCode'>Merchant Category Code</label>
+      <input type='text' class='form-control' id='merchantCategoryCode' placeholder='XXXX' maxlength='4'>
+    </div>
+    <div class='form-group'>
+      <label for='merchantZipCode'>Merchant ZIP Code</label>
+      <input type='text' class='form-control' id='merchantZipCode' placeholder='XXXXX' maxlength='5'>
+    </div>
+    <div class='form-group'>
+      <label for='merchantState'>Merchant State/Province Code</label>
+      <input type='text' class='form-control' id='merchantState' placeholder='XXX' maxlength='3'>
+    </div>
+    <div class='form-group'>
+      <label for='requestedPaymentService'>Requested Payment Service</label>
+      <input type='text' class='form-control' id='requestedPaymentService' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='numOfPaymentForms'>Number of Payment Forms</label>
+      <input type='text' class='form-control' id='numOfPaymentForms' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='usageCode'>Usage Code</label>
+      <input type='text' class='form-control' id='usageCode' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='reasonCode'>Reason Code</label>
+      <input type='text' class='form-control' id='reasonCode' placeholder='XX' maxlength='2'>
+    </div>
+    <div class='form-group'>
+      <label for='settlementFlag'>Settlement Flag</label>
+      <input type='text' class='form-control' id='settlementFlag' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='authCharIndicator'>Authorization Characteristics Indicator</label>
+      <input type='text' class='form-control' id='authCharIndicator' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='authCode'>Authorization Code</label>
+      <input type='text' class='form-control' id='authCode' placeholder='XXXXXX' maxlength='6'>
+    </div>
+    <div class='form-group'>
+      <label for='posTerminalCapability'>POS Terminal Capability</label>
+      <input type='text' class='form-control' id='posTerminalCapability' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='intlFeeIndicator'>International Fee Indicator</label>
+      <input type='text' class='form-control' id='intlFeeIndicator' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='cardholderIdMethod'>Cardholder ID Method</label>
+      <input type='text' class='form-control' id='cardholderIdMethod' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='collectionOnlyFlag'>Collection-Only Flag</label>
+      <input type='text' class='form-control' id='collectionOnlyFlag' placeholder='X' maxlength='1'>
+    </div>
+    <div class='form-group'>
+      <label for='posEntryMode'>POS Entry Mode</label>
+      <input type='text' class='form-control' id='posEntryMode' placeholder='XX' maxlength='2'>
+    </div>
+    <div class='form-group'>
+      <label for='centralProcessDate'>Central Processing Date</label>
+      <input type='text' class='form-control' id='centralProcessDate' placeholder='XXXX' maxlength='4'>
+    </div>
+    <div class='form-group'>
+      <label for='reimbursementAttribute'>Reimbursement Attribute</label>
+      <input type='text' class='form-control' id='reimbursementAttribute' placeholder='X' maxlength='1'>
+    </div>
+    <button type='button' id='deleteTCR0' class='btn btn-danger'>Delete</button>
+  </form>
 </div>

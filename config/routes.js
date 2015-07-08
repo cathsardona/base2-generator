@@ -46,6 +46,11 @@ module.exports.routes = {
     action: 'list'
   },
 
+  'POST /v1/base2': {
+    controller: 'Base2Controller',
+    action: 'create'
+  }
+
 
   /***************************************************************************
   *                                                                          *
