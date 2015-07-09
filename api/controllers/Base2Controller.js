@@ -1,20 +1,21 @@
 module.exports = {
 
   create: function(req, res) {
+    console.log(JSON.stringify(req.body));
     var transactions = req.body.transactions;
     var data = '';
 
     async.auto({
       createFileContent: function(callback) {
-        async.eachSeries(transactions, function(transaction, done){
+        async.eachSeries(transactions, function(transaction, done) {
           data += getTransactionLine(transaction);
           done();
         }, function() {
-          console.log(data);
           callback(null, data);
         });
       },
-      saveFile: ['createFileContent', function(callback) {
+      saveFile: ['createFileContent', function(callback, results) {
+        console.log(results.createFileContent);
         callback();
       }],
       uploadToS3: ['saveFile', function(callback) {

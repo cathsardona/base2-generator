@@ -1,8 +1,41 @@
  $(document).ready(function () {
+
   $('#addTCR0').click(function() {
     $('.tcr0').last().clone().show().appendTo('#mainArea');
   });
-  $('#mainArea').on('click', '#deleteTCR0', function(){
+
+  $('#addTCR1').click(function() {
+    $('.tcr1').last().clone().show().appendTo('#mainArea');
+  });
+
+  $('#generate').click(function(){
+    generate();
+  });
+
+  $('#mainArea').on('click', '#deleteTCR0', function() {
     $(this).parent().parent().remove();
   });
+
 });
+
+function generate() {
+  var data = {
+    transactions: []
+  };
+  var txn;
+  $('#mainArea > div').each(function () {
+    data.transactions.push(convertFormToJSON($(this).find('form')));
+  });
+  $.post('/v1/base2', data);
+};
+
+function convertFormToJSON(form){
+    var array = form.serializeArray();
+    var json = {};
+    
+    jQuery.each(array, function() {
+        json[this.name] = this.value || '';
+    });
+    
+    return json;
+}
