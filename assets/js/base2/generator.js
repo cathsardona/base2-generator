@@ -8,6 +8,10 @@
     $('.tcr1').last().clone().show().appendTo('#mainArea');
   });
 
+  $('#addTCR5').click(function() {
+    $('.tcr5').last().clone().show().appendTo('#mainArea');
+  });
+
   $('#generate').click(function(){
     generate();
   });
