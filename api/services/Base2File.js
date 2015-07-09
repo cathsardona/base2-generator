@@ -98,7 +98,7 @@ module.exports = {
       txn.infoIndicator +
       txn.merchTelNum +
       txn.addlDataIndicator +
-      txn.merchVerificationValue +
+      txn.merchVolumeIndicator +
       txn.eCommGoodsIndicator +
       txn.merchVerificationValue +
       txn.interchangeFeeAmt +
