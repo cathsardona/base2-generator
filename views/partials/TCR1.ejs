@@ -1,9 +1,16 @@
 <div class='tcr1 forms'>
-  <h3>TCR 1</h3>
+  <h4>TCR 1</h4>
   <form class='form-inline'>
     <div class='form-group'>
       <label for='transCode'>Transaction Code</label>
-      <input type='text' class='form-control' id='transCode' name='transCode' maxlength='2'>
+      <select id='transCode' name='transCode' class='form-control'>
+        <option value='05'>Sales Draft</option>
+        <option value='06'>Credit Voucher</option>
+        <option value='07'>Cash Disbursement</option>
+        <option value='15'>Sales Draft Chargeback</option>
+        <option value='16'>Credit Voucher Chargeback</option>
+        <option value='17'>Cash Disbursement Chargeback</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='transCodeQualifier'>Transaction Code Qualifier</label>
