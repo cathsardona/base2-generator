@@ -17,7 +17,7 @@
   });
 
   $('#mainArea').on('click', '#deleteTCR0', function() {
-    $(this).parent().parent().remove();
+    $(this).closest('form').parent().remove();
   });
 
   $('#addHeaderIncomingCTF').click(function() {
