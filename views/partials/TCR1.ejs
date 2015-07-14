@@ -1,6 +1,6 @@
-<div class='tcr1 forms'>
+<div class='tcr1 forms col-sm-12'>
   <h4>TCR 1</h4>
-  <form class='form-inline'>
+  <form class='form'>
     <div class='form-group'>
       <label for='transCode'>Transaction Code</label>
       <select id='transCode' name='transCode' class='form-control'>
@@ -14,30 +14,29 @@
     </div>
     <div class='form-group'>
       <label for='transCodeQualifier'>Transaction Code Qualifier</label>
-      <input type='text' class='form-control' id='transCodeQualifier' name='transCodeQualifier' maxlength='1'>
+      <select id='transCodeQualifier' name='transCodeQualifier' class='form-control'>
+        <option value='0'>Default</option>
+        <option value='1'>Account Funding</option>
+        <option value='2'>Original Credit</option>
+      </select>
     </div>
-    <div class='form-group'>
-      <input type='hidden' class='form-control' id='transCompSeqNum' name='transCompSeqNum' maxlength='1' value='1'>
-    </div>
-    <div class='form-group'>
-      <label for='businessFormatCode'>Business Format Code</label>
-      <input type='text' class='form-control' id='businessFormatCode' name='businessFormatCode' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='tokenAssuranceLevel'>Token Assurance Level</label>
-      <input type='text' class='form-control' id='tokenAssuranceLevel' name='tokenAssuranceLevel' maxlength='2'>
-    </div>
-    <div class='form-group'>
-      <label for='reserved1'>Reserved</label>
-      <input type='text' class='form-control' id='reserved1' name='reserved1' maxlength='9'>
-    </div>
+    <input type='hidden' class='form-control' id='transCompSeqNum' name='transCompSeqNum' maxlength='1' value='1'>
+    <input type='hidden' class='form-control' id='businessFormatCode' name='businessFormatCode' maxlength='1' value=' '>
+    <input type='hidden' class='form-control' id='tokenAssuranceLevel' name='tokenAssuranceLevel' maxlength='1' value=' '>
+    <input type='hidden' class='form-control' id='reserved1' name='reserved1' maxlength='9' value='         '>
     <div class='form-group'>
       <label for='chargebackRefNum'>Chargeback Reference Number</label>
       <input type='text' class='form-control' id='chargebackRefNum' name='chargebackRefNum' maxlength='6'>
     </div>
     <div class='form-group'>
       <label for='documentationIndicator'>Documentation Indicator</label>
-      <input type='text' class='form-control' id='documentationIndicator' name='documentationIndicator' maxlength='1'>
+      <select id='documentationIndicator' name='documentationIndicator' class='form-control'>
+        <option value=' '>No support documentation required</option>
+        <option value='0'>No support documentation provided</option>
+        <option value='1'>Support documentation to follow</option>
+        <option value='2'>Invalid ARN and no supporting documentation required</option>
+        <option value='3'>Invalid ARN and no supporting documentation received</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='memberMessageText'>Member Message Text</label>
@@ -55,10 +54,7 @@
       <label for='issuerCharge'>Issuer Charge</label>
       <input type='text' class='form-control' id='issuerCharge' name='issuerCharge' maxlength='1'>
     </div>
-    <div class='form-group'>
-      <label for='reserved2'>Reserved</label>
-      <input type='text' class='form-control' id='reserved2' name='reserved2' maxlength='1'>
-    </div>
+    <input type='hidden' class='form-control' id='reserved2' name='reserved2' maxlength='1' value=' '>
     <div class='form-group'>
       <label for='cardAcceptorID'>Card Acceptor ID</label>
       <input type='text' class='form-control' id='cardAcceptorID' name='cardAcceptorID' maxlength='15'>
@@ -77,23 +73,42 @@
     </div>
     <div class='form-group'>
       <label for='specialChargebackIndicator'>Special Chargeback Indicator</label>
-      <input type='text' class='form-control' id='specialChargebackIndicator' name='specialChargebackIndicator' maxlength='1'>
+      <select id='specialChargebackIndicator' name='specialChargebackIndicator' class='form-control'>
+        <option value=' '>Field not applicable</option>
+        <option value='P'>Partial amount chargeback</option>
+      </select>
     </div>
-    <div class='form-group'>
-      <label for='interfaceTraceNumber'>Interface Trace Number</label>
-      <input type='text' class='form-control' id='interfaceTraceNumber' name='interfaceTraceNumber' maxlength='6'>
-    </div>
+    <input type='hidden' class='form-control' id='interfaceTraceNumber' name='interfaceTraceNumber' maxlength='6' value='000000'>
     <div class='form-group'>
       <label for='acceptanceTerminalIndicator'>Acceptance Terminal Indicator</label>
-      <input type='text' class='form-control' id='acceptanceTerminalIndicator' name='acceptanceTerminalIndicator' maxlength='1'>
+      <select id='acceptanceTerminalIndicator' name='acceptanceTerminalIndicator' class='form-control'>
+        <option value=' '>N/A</option>
+        <option value='1'>Unattended cardholder activated, below-floor-limit transaction</option>
+        <option value='2'>Unattended chip and PIN transactions</option>
+        <option value='3'>Unattended cardholder activated (VE use only)</option>
+        <option value='4'>Remote Indicator</option>
+        <option value='5'>Unattended Consumer Device</option>
+        <option value='9'>Mobile Acceptance Solution</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='prepaidCardIndicator'>Prepaid Card Indicator</label>
-      <input type='text' class='form-control' id='prepaidCardIndicator' name='prepaidCardIndicator' maxlength='1'>
+      <select id='prepaidCardIndicator' name='prepaidCardIndicator' class='form-control'>
+        <option value=' '>N/A</option>
+        <option value='P'>Prepaid card</option>
+        <option value='L'>Prepaid Load</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='serviceDevelopmentField'>Service Development Field</label>
-      <input type='text' class='form-control' id='serviceDevelopmentField' name='serviceDevelopmentField' maxlength='1'>
+      <select id='serviceDevelopmentField' name='serviceDevelopmentField' class='form-control'>
+        <option value='0'>Not used</option>
+        <option value='1'>Electronic commerce</option>
+        <option value='2'>In-flight Commerce</option>
+        <option value='5'>Transponder-Initiated</option>
+        <option value='6'>Relationship Participant</option>
+        <option value='7'>Deferred Billing Indicator</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='avsResponseCode'>AVS Response Code</label>
@@ -105,11 +120,25 @@
     </div>
     <div class='form-group'>
       <label for='purchaseIdentifierFormat'>Purchase Identifier Format</label>
-      <input type='text' class='form-control' id='purchaseIdentifierFormat' name='purchaseIdentifierFormat' maxlength='1'>
+      <select id='purchaseIdentifierFormat' name='purchaseIdentifierFormat' class='form-control'>
+        <option value='0'>0</option>
+        <option value='1'>1</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='accountSelection'>Account Selection</label>
-      <input type='text' class='form-control' id='accountSelection' name='accountSelection' maxlength='1'>
+      <select id='accountSelection' name='accountSelection' class='form-control'>
+        <option value=' '>N/A</option>
+        <option value='0'>Unavailable</option>
+        <option value='1'>Savings Account</option>
+        <option value='2'>Checking Account</option>
+        <option value='3'>Credit Card Account</option>
+        <option value='D'>Debit</option>
+        <option value='P'>Prepaid</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='installmentPaymentCount'>Installment Payment Count</label>
@@ -125,11 +154,20 @@
     </div>
     <div class='form-group'>
       <label for='chipConditionCode'>Chip Condition Code</label>
-      <input type='text' class='form-control' id='chipConditionCode' name='chipConditionCode' maxlength='1'>
+      <select id='chipConditionCode' name='chipConditionCode' class='form-control'>
+        <option value=' '>Space</option>
+        <option value='0'>0</option>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+      </select>
     </div>
     <div class='form-group'>
       <label for='posEnvironment'>POS Environment</label>
-      <input type='text' class='form-control' id='posEnvironment' name='posEnvironment' maxlength='1'>
+      <select id='posEnvironment' name='posEnvironment' class='form-control'>
+        <option value=' '>Default</option>
+        <option value='R'>Recurring</option>
+        <option value='I'>Installment</option>
+      </select>
     </div>
     <br>
     <button type='button' id='deleteTCR0' class='btn btn-danger'>Delete</button>
