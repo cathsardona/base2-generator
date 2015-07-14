@@ -1,142 +1,206 @@
-<div class='tcr5 forms'>
+<div class='tcr5 forms col-sm-12'>
   <h3>TCR 5</h3>
-  <form class='form-inline'>
-    <div class='form-group'>
+  <form class='form'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
       <label for='transCode'>Transaction Code</label>
-      <input type='text' class='form-control' id='transCode' name='transCode' maxlength='2'>
-    </div>
-    <div class='form-group'>
+      <select id='transCode' name='transCode' class='form-control'>
+        <option value='05'>Sales Draft</option>
+        <option value='06'>Credit Voucher</option>
+        <option value='07'>Cash Disbursement</option>
+        <option value='15'>Sales Draft Chargeback</option>
+        <option value='16'>Credit Voucher Chargeback</option>
+        <option value='17'>Cash Disbursement Chargeback</option>
+      </select>
+      </div>
+      <div class='form-group'>
       <label for='transCodeQualifier'>Transaction Code Qualifier</label>
-      <input type='text' class='form-control' id='transCodeQualifier' name='transCodeQualifier' maxlength='1'>
-    </div>
-    <div class='form-group'>
+      <select id='transCodeQualifier' name='transCodeQualifier' class='form-control'>
+        <option value='0'>Default</option>
+        <option value='1'>Account Funding</option>
+        <option value='2'>Original Credit</option>
+      </select>
+      </div>
       <input type='hidden' class='form-control' id='transCompSeqNum' name='transCompSeqNum' maxlength='1' value='5'>
+      <div class='form-group'>
+        <label for='transIdentifier'>Transaction Identifier</label>
+        <input type='text' class='form-control' id='transIdentifier' name='transIdentifier' maxlength='15'>
+      </div>
+      <div class='form-group'>
+        <label for='authAmt'>Authorized Amount</label>
+        <input type='text' class='form-control' id='authAmt' name='authAmt' maxlength='12'>
+      </div>
+      <div class='form-group'>
+        <label for='authCurrCode'>Authorization Currency Code</label>
+        <input type='text' class='form-control' id='authCurrCode' name='authCurrCode' maxlength='3'>
+      </div>
+      <div class='form-group'>
+        <label for='authResponseCode'>Authorization Response Code</label>
+        <input type='text' class='form-control' id='authResponseCode' name='authResponseCode' maxlength='2'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='transIdentifier'>Transaction Identifier</label>
-      <input type='text' class='form-control' id='transIdentifier' name='transIdentifier' maxlength='15'>
-    </div>
-    <div class='form-group'>
-      <label for='authAmt'>Authorized Amount</label>
-      <input type='text' class='form-control' id='authAmt' name='authAmt' maxlength='12'>
-    </div>
-    <div class='form-group'>
-      <label for='authCurrCode'>Authorization Currency Code</label>
-      <input type='text' class='form-control' id='authCurrCode' name='authCurrCode' maxlength='3'>
-    </div>
-    <div class='form-group'>
-      <label for='authResponseCode'>Authorization Response Code</label>
-      <input type='text' class='form-control' id='authResponseCode' name='authResponseCode' maxlength='2'>
-    </div>
-    <div class='form-group'>
-      <label for='validationCode'>Validation Code</label>
-      <input type='text' class='form-control' id='validationCode' name='validationCode' maxlength='4'>
-    </div>
-    <div class='form-group'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='validationCode'>Validation Code</label>
+        <input type='text' class='form-control' id='validationCode' name='validationCode' maxlength='4'>
+      </div>
+      <div class='form-group'>
       <label for='excludedTransIdentifierReason'>Excluded Transaction Identifier Reason</label>
       <input type='text' class='form-control' id='excludedTransIdentifierReason' name='excludedTransIdentifierReason' maxlength='1'>
+      </div>
+      <div class='form-group'>
+        <label for='crsProcessingCode'>CRS Processing Code</label>
+        <select id='crsProcessingCode' name='crsProcessingCode' class='form-control'>
+          <option value=' '>Space</option>
+          <option value='Y'>Y</option>
+        </select>
+      </div>
+      <div class='form-group'>
+        <label for='chargebackRightsIndicator'>Chargeback Rights Indicator</label>
+        <select id='chargebackRightsIndicator' name='chargebackRightsIndicator' class='form-control'>
+          <option value=' '>Spaces</option>
+          <option value='00'>00</option>
+          <option value='01'>01</option>
+          <option value='02'>02</option>
+          <option value='03'>03</option>
+          <option value='04'>04</option>
+          <option value='05'>05</option>
+          <option value='08'>08</option>
+          <option value='09'>09</option>
+          <option value='10'>10</option>
+          <option value='11'>11</option>
+          <option value='12'>12</option>
+          <option value='13'>13</option>
+          <option value='14'>14</option>
+          <option value='15'>15</option>
+          <option value='16'>16</option>
+          <option value='17'>17</option>
+        </select>
+      </div>
+      <div class='form-group'>
+        <label for='multiClearingSeqNum'>Multiple Clearing Sequence Number</label>
+        <input type='text' class='form-control' id='multiClearingSeqNum' name='multiClearingSeqNum' maxlength='2'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='crsProcessingCode'>CRS Processing Code</label>
-      <input type='text' class='form-control' id='crsProcessingCode' name='crsProcessingCode' maxlength='1'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='multiClearingSeqCount'>Multiple Clearing Sequence Count</label>
+        <input type='text' class='form-control' id='multiClearingSeqCount' name='multiClearingSeqCount' maxlength='2'>
+      </div>
+      <div class='form-group'>
+        <label for='marketAuthDataIndicator'>Market-Specific Authorization Data Indicator</label>
+        <select id='marketAuthDataIndicator' name='marketAuthDataIndicator' class='form-control'>
+          <option value=' '>Space</option>
+          <option value='A'>A</option>
+          <option value='B'>B</option>
+          <option value='E'>E</option>
+          <option value='H'>H</option>
+          <option value='J'>J</option>
+          <option value='M'>M</option>
+          <option value='N'>N</option>
+          <option value='T'>T</option>
+        </select>
+      </div>
+      <div class='form-group'>
+        <label for='totalAuthAmt'>Total Authorized Amount</label>
+        <input type='text' class='form-control' id='totalAuthAmt' name='totalAuthAmt' maxlength='12'>
+      </div>
+      <div class='form-group'>
+        <label for='infoIndicator'>Information Indicator</label>
+        <select id='infoIndicator' name='infoIndicator' class='form-control'>
+          <option value='Y'>Y</option>
+          <option value='N'>N</option>
+        </select>
+      </div>
+      <div class='form-group'>
+        <label for='merchTelNum'>Merchant Telephone Number</label>
+        <input type='text' class='form-control' id='merchTelNum' name='merchTelNum' maxlength='14'>
+      </div>
+      <input type='hidden' class='form-control' id='addlDataIndicator' name='addlDataIndicator' maxlength='1' value=' '>
+      <div class='form-group'>
+        <label for='merchVolumeIndicator'>Merchant Volume Indicator</label>
+        <input type='text' class='form-control' id='merchVolumeIndicator' name='merchVolumeIndicator' maxlength='2'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='chargebackRightsIndicator'>Chargeback Rights Indicator</label>
-      <input type='text' class='form-control' id='chargebackRightsIndicator' name='chargebackRightsIndicator' maxlength='2'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='eCommGoodsIndicator'>Electronic Commerce Goods Indicator</label>
+        <select id='eCommGoodsIndicator' name='eCommGoodsIndicator' class='form-control'>
+          <option value=' '>Space</option>
+          <option value='D'>D</option>
+          <option value='P'>P</option>
+        </select>
+      </div>
+      <div class='form-group'>
+        <label for='merchVerificationValue'>Merchant Verification Value</label>
+        <input type='text' class='form-control' id='merchVerificationValue' name='merchVerificationValue' maxlength='10'>
+      </div>
+      <div class='form-group'>
+        <label for='interchangeFeeAmt'>Interchange Fee Amount</label>
+        <input type='text' class='form-control' id='interchangeFeeAmt' name='interchangeFeeAmt' maxlength='15'>
+      </div>
+      <div class='form-group'>
+        <label for='interchangeFeeSign'>Interchange Fee Sign</label>
+        <input type='text' class='form-control' id='interchangeFeeSign' name='interchangeFeeSign' maxlength='1'>
+      </div>
+      <div class='form-group'>
+        <label for='sourceToBaseExchangeRate'>Source Currency to Base Currency Exchange Rate</label>
+        <input type='text' class='form-control' id='sourceToBaseExchangeRate' name='sourceToBaseExchangeRate' maxlength='8'>
+      </div>
+      <div class='form-group'>
+        <label for='baseToDestExchangeRate'>Base Currency to Destination Currency Exchange Rate</label>
+        <input type='text' class='form-control' id='baseToDestExchangeRate' name='baseToDestExchangeRate' maxlength='8'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='multiClearingSeqNum'>Multiple Clearing Sequence Number</label>
-      <input type='text' class='form-control' id='multiClearingSeqNum' name='multiClearingSeqNum' maxlength='2'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='optionalIssuerISAAmt'>Optional Issuer ISA Amount</label>
+        <input type='text' class='form-control' id='optionalIssuerISAAmt' name='optionalIssuerISAAmt' maxlength='12'>
+      </div>
+      <div class='form-group'>
+        <label for='productId'>Product ID</label>
+        <input type='text' class='form-control' id='productId' name='productId' maxlength='2'>
+      </div>
+      <div class='form-group'>
+        <label for='programId'>Program ID</label>
+        <input type='text' class='form-control' id='programId' name='programId' maxlength='6'>
+      </div>
+      <div class='form-group'>
+        <label for='dccIndicator'>DCC Indicator</label>
+        <select id='dccIndicator' name='dccIndicator' class='form-control'>
+          <option value=' '>Space</option>
+          <option value='1'>1</option>
+        </select>
+      </div>
+      <div class='form-group'>
+        <label for='acctTypeId'>Account Type Identification</label>
+        <input type='text' class='form-control' id='acctTypeId' name='acctTypeId' maxlength='4'>
+      </div>
+      <div class='form-group'>
+        <label for='spendQualifiedIndicator'>Spend Qualified Indicator</label>
+        <select id='spendQualifiedIndicator' name='spendQualifiedIndicator' class='form-control'>
+          <option value=' '>Space</option>
+          <option value='B'>B</option>
+          <option value='Q'>Q</option>
+          <option value='N'>N</option>
+        </select>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='multiClearingSeqCount'>Multiple Clearing Sequence Count</label>
-      <input type='text' class='form-control' id='multiClearingSeqCount' name='multiClearingSeqCount' maxlength='2'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='panToken'>PAN Token</label>
+        <input type='text' class='form-control' id='panToken' name='panToken' maxlength='16'>
+      </div>
+      <div class='form-group'>
+        <label for='reserved'>Reserved</label>
+        <input type='text' class='form-control' id='reserved' name='reserved' maxlength='2'>
+      </div>
+      <div class='form-group'>
+        <label for='cvv2ResultCode'>CVV2 Result Code</label>
+        <input type='text' class='form-control' id='cvv2ResultCode' name='cvv2ResultCode' maxlength='1'>
+      </div>
+      <br>
+      <button type='button' id='deleteTCR0' class='btn btn-danger'>Delete</button>
     </div>
-    <div class='form-group'>
-      <label for='marketAuthDataIndicator'>Market-Specific Authorization Data Indicator</label>
-      <input type='text' class='form-control' id='marketAuthDataIndicator' name='marketAuthDataIndicator' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='totalAuthAmt'>Total Authorized Amount</label>
-      <input type='text' class='form-control' id='totalAuthAmt' name='totalAuthAmt' maxlength='12'>
-    </div>
-    <div class='form-group'>
-      <label for='infoIndicator'>Information Indicator</label>
-      <input type='text' class='form-control' id='infoIndicator' name='infoIndicator' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='merchTelNum'>Merchant Telephone Number</label>
-      <input type='text' class='form-control' id='merchTelNum' name='merchTelNum' maxlength='14'>
-    </div>
-    <div class='form-group'>
-      <label for='addlDataIndicator'>Additional Data Indicator</label>
-      <input type='text' class='form-control' id='addlDataIndicator' name='addlDataIndicator' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='merchVolumeIndicator'>Merchant Volume Indicator</label>
-      <input type='text' class='form-control' id='merchVolumeIndicator' name='merchVolumeIndicator' maxlength='2'>
-    </div>
-    <div class='form-group'>
-      <label for='eCommGoodsIndicator'>Electronic Commerce Goods Indicator</label>
-      <input type='text' class='form-control' id='eCommGoodsIndicator' name='eCommGoodsIndicator' maxlength='2'>
-    </div>
-    <div class='form-group'>
-      <label for='merchVerificationValue'>Merchant Verification Value</label>
-      <input type='text' class='form-control' id='merchVerificationValue' name='merchVerificationValue' maxlength='10'>
-    </div>
-    <div class='form-group'>
-      <label for='interchangeFeeAmt'>Interchange Fee Amount</label>
-      <input type='text' class='form-control' id='interchangeFeeAmt' name='interchangeFeeAmt' maxlength='15'>
-    </div>
-    <div class='form-group'>
-      <label for='interchangeFeeSign'>Interchange Fee Sign</label>
-      <input type='text' class='form-control' id='interchangeFeeSign' name='interchangeFeeSign' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='sourceToBaseExchangeRate'>Source Currency to Base Currency Exchange Rate</label>
-      <input type='text' class='form-control' id='sourceToBaseExchangeRate' name='sourceToBaseExchangeRate' maxlength='8'>
-    </div>
-    <div class='form-group'>
-      <label for='baseToDestExchangeRate'>Base Currency to Destination Currency Exchange Rate</label>
-      <input type='text' class='form-control' id='baseToDestExchangeRate' name='baseToDestExchangeRate' maxlength='8'>
-    </div>
-    <div class='form-group'>
-      <label for='optionalIssuerISAAmt'>Optional Issuer ISA Amount</label>
-      <input type='text' class='form-control' id='optionalIssuerISAAmt' name='optionalIssuerISAAmt' maxlength='12'>
-    </div>
-    <div class='form-group'>
-      <label for='productId'>Product ID</label>
-      <input type='text' class='form-control' id='productId' name='productId' maxlength='2'>
-    </div>
-    <div class='form-group'>
-      <label for='programId'>Program ID</label>
-      <input type='text' class='form-control' id='programId' name='programId' maxlength='6'>
-    </div>
-    <div class='form-group'>
-      <label for='dccIndicator'>DCC Indicator</label>
-      <input type='text' class='form-control' id='dccIndicator' name='dccIndicator' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='acctTypeId'>Account Type Identification</label>
-      <input type='text' class='form-control' id='acctTypeId' name='acctTypeId' maxlength='4'>
-    </div>
-    <div class='form-group'>
-      <label for='spendQualifiedIndicator'>Spend Qualified Indicator</label>
-      <input type='text' class='form-control' id='spendQualifiedIndicator' name='spendQualifiedIndicator' maxlength='1'>
-    </div>
-    <div class='form-group'>
-      <label for='panToken'>PAN Token</label>
-      <input type='text' class='form-control' id='panToken' name='panToken' maxlength='16'>
-    </div>
-    <div class='form-group'>
-      <label for='reserved'>Reserved</label>
-      <input type='text' class='form-control' id='reserved' name='reserved' maxlength='2'>
-    </div>
-    <div class='form-group'>
-      <label for='cvv2ResultCode'>CVV2 Result Code</label>
-      <input type='text' class='form-control' id='cvv2ResultCode' name='cvv2ResultCode' maxlength='1'>
-    </div>
-    <br>
-    <button type='button' id='deleteTCR0' class='btn btn-danger'>Delete</button>
   </form>
 </div>
