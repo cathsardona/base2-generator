@@ -29,16 +29,29 @@ module.exports = {
 };
 
 function getTransactionLine(transaction) {
+  var transCode = transaction.transCode;
   var transCompSeqNum = transaction.transCompSeqNum;
-  switch (transCompSeqNum) {
-    case '0': 
-      return Base2File.createTCR0(transaction);
+  switch (transCode) {
+    case '90':
+      return Base2File.createHeaderIncomingCTF(transaction);
       break;
-    case '1':
-      return Base2File.createTCR1(transaction);
-      break;
-    case '5':
-      return Base2File.createTCR5(transaction);
+    case ('05' || '06' || '07' || '15' || '16' || '17'):
+      switch (transCompSeqNum) {
+        case '0': 
+          return Base2File.createTCR0(transaction);
+          break;
+        case '1':
+          return Base2File.createTCR1(transaction);
+          break;
+        case '5':
+          return Base2File.createTCR5(transaction);
+          break;
+        default:
+          return '';
+          break;
+      }
+    case ('91' || '92'):
+      return Base2File.createTrailer(transaction);
       break;
     default:
       return '';
