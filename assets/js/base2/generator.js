@@ -20,6 +20,14 @@
     $(this).parent().parent().remove();
   });
 
+  $('#addHeaderIncomingCTF').click(function() {
+    $('.headerIncomingCTF').last().clone().show().appendTo('#mainArea');
+  });
+
+  $('#addTrailer').click(function() {
+    $('.trailer').last().clone().show().appendTo('#mainArea');
+  });
+
 });
 
 function generate() {
