@@ -16,7 +16,7 @@
     generate();
   });
 
-  $('#mainArea').on('click', '#deleteTCR0', function() {
+  $('#mainArea').on('click', '#delete', function() {
     $(this).closest('form').parent().remove();
   });
 

@@ -1,71 +1,70 @@
-<div class='trailer forms'>
-  <h3>Trailer</h3>
-  <form class='form-inline'>
-    <div class='form-group'>
-      <label for='transCode'>Transaction Code</label>
-      <input type='text' class='form-control' id='transCode' name='transCode' maxlength='2'>
-    </div>
-    <div class='form-group'>
+<div class='trailer forms col-sm-12'>
+  <h4>Trailer</h4>
+  <form class='form'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='transCode'>Transaction Code</label>
+          <select id='transCode' name='transCode' class='form-control'>
+            <option value='91'>91</option>
+            <option value='92'>92</option>
+          </select>
+      </div>
       <input type='hidden' class='form-control' id='transCodeQualifier' name='transCodeQualifier' maxlength='1' value='0'>
-    </div>
-    <div class='form-group'>
       <input type='hidden' class='form-control' id='transCompSeqNum' name='transCompSeqNum' maxlength='1' value='0'>
+      <div class='form-group'>
+        <label for='bin'>BIN</label>
+        <input type='text' class='form-control' id='bin' name='bin' maxlength='6'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='bin'>BIN</label>
-      <input type='text' class='form-control' id='bin' name='bin' maxlength='6'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='processingDate'>Processing Date (YYDDD)</label>
+        <input type='text' class='form-control' id='processingDate' name='processingDate' maxlength='5'>
+      </div>
+      <div class='form-group'>
+        <label for='destinationAmt'>Destination Amount</label>
+        <input type='text' class='form-control' id='destinationAmt' name='destinationAmt' maxlength='15'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='processingDate'>Processing Date (YYDDD)</label>
-      <input type='text' class='form-control' id='processingDate' name='processingDate' maxlength='5'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='numMonetaryTrans'># of Monetary Transactions</label>
+        <input type='text' class='form-control' id='numMonetaryTrans' name='numMonetaryTrans' maxlength='12'>
+      </div>
+      <div class='form-group'>
+        <label for='batchNum'>Batch Number</label>
+        <input type='text' class='form-control' id='batchNum' name='batchNum' maxlength='6'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='destinationAmt'>Destination Amount</label>
-      <input type='text' class='form-control' id='destinationAmt' name='destinationAmt' maxlength='15'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='numTCRs'># of TCRs</label>
+        <input type='text' class='form-control' id='numTCRs' name='numTCRs' maxlength='12'>
+      </div>
+      <input type='hidden' class='form-control' id='reserved1' name='reserved1' maxlength='6' value='000000'>
+      <div class='form-group'>
+        <label for='centerBatchID'>Center Batch ID</label>
+        <input type='text' class='form-control' id='centerBatchID' name='centerBatchID' maxlength='8'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='numMonetaryTrans'>Number of Monetary Transactions</label>
-      <input type='text' class='form-control' id='numMonetaryTrans' name='numMonetaryTrans' maxlength='12'>
+    <div class='col-sm-2'>
+      <div class='form-group'>
+        <label for='numTrans'># of Transactions</label>
+        <input type='text' class='form-control' id='numTrans' name='numTrans' maxlength='9'>
+      </div>
+      <input type='hidden' class='form-control' id='reserved2' name='reserved2' maxlength='18' value='000000000000000000'>
+      <div class='form-group'>
+        <label for='sourceAmt'>Source Amount</label>
+        <input type='text' class='form-control' id='sourceAmt' name='sourceAmt' maxlength='15'>
+      </div>
     </div>
-    <div class='form-group'>
-      <label for='batchNum'>Batch Number</label>
-      <input type='text' class='form-control' id='batchNum' name='batchNum' maxlength='6'>
-    </div>
-    <div class='form-group'>
-      <label for='numTCRs'>Number of TCRs</label>
-      <input type='text' class='form-control' id='numTCRs' name='numTCRs' maxlength='12'>
-    </div>
-    <div class='form-group'>
-      <input type='hidden' class='form-control' id='reserved1' name='reserved1' maxlength='6' value='      '>
-    </div>
-    <div class='form-group'>
-      <label for='centerBatchID'>Center Batch ID</label>
-      <input type='text' class='form-control' id='centerBatchID' name='centerBatchID' maxlength='8'>
-    </div>
-    <div class='form-group'>
-      <label for='numTrans'>Number of Transactions</label>
-      <input type='text' class='form-control' id='numTrans' name='numTrans' maxlength='9'>
-    </div>
-    <div class='form-group'>
-      <input type='hidden' class='form-control' id='reserved2' name='reserved2' maxlength='18' value='                  '>
-    </div>
-    <div class='form-group'>
-      <label for='sourceAmt'>Source Amount</label>
-      <input type='text' class='form-control' id='sourceAmt' name='sourceAmt' maxlength='15'>
-    </div>
-    <div class='form-group'>
-      <input type='hidden' class='form-control' id='reserved3' name='reserved3' maxlength='15' value='               '>
-    </div>
-    <div class='form-group'>
-      <input type='hidden' class='form-control' id='reserved4' name='reserved4' maxlength='15' value='               '>
-    </div>
-    <div class='form-group'>
-      <input type='hidden' class='form-control' id='reserved5' name='reserved5' maxlength='15' value='               '>
-    </div>
-    <div class='form-group'>
+    <div class='col-sm-2'>
+      <input type='hidden' class='form-control' id='reserved3' name='reserved3' maxlength='15' value='000000000000000'>
+      <input type='hidden' class='form-control' id='reserved4' name='reserved4' maxlength='15' value='000000000000000'>
+      <input type='hidden' class='form-control' id='reserved5' name='reserved5' maxlength='15' value='000000000000000'>
       <input type='hidden' class='form-control' id='reserved6' name='reserved6' maxlength='7' value='       '>
+      <br>
+      <button type='button' id='delete' class='btn btn-danger'>Delete</button>
     </div>
-    <br>
-    <button type='button' id='deleteTCR0' class='btn btn-danger'>Delete</button>
   </form>
 </div>
