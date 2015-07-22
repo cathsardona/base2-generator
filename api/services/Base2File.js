@@ -1,5 +1,24 @@
 module.exports = {
 
+  createHeaderIncomingCTF: function(txn) {
+    var data = '';
+    data = txn.transCode +
+      txn.processingBIN +
+      txn.processingDate +
+      txn.reserved1 +
+      txn.settlementDate +
+      txn.reserved2 +
+      txn.releaseNum +
+      txn.testOption +
+      txn.reserved3 +
+      txn.securityCode +
+      txn.reserved4 +
+      txn.incomingFileID +
+      txn.reserved5 +
+      '\n';
+    return data;
+  },
+
   createTCR0: function(txn) {
     var data = '';
     data = txn.transCode + 
@@ -114,6 +133,30 @@ module.exports = {
       txn.panToken +
       txn.reserved +
       txn.cvv2ResultCode +
+      '\n';
+    return data;
+  },
+
+  createTrailer: function(txn) {
+    var data = '';
+    data = txn. transCode +
+      txn.transCodeQualifier +
+      txn.transCompSeqNum +
+      txn.bin +
+      txn.processingDate +
+      txn.destinationAmt +
+      txn.numMonetaryTrans + 
+      txn.batchNum +
+      txn.numTCRs +
+      txn.reserved1 +
+      txn.centerBatchID +
+      txn.numTrans +
+      txn.reserved2 +
+      txn.sourceAmt +
+      txn.reserved3 +
+      txn.reserved4 +
+      txn.reserved5 +
+      txn.reserved6 +
       '\n';
     return data;
   }

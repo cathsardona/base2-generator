@@ -32,7 +32,8 @@
 
 function generate() {
   var data = {
-    transactions: []
+    transactions: [],
+    type: $('#type').val()
   };
   var txn;
   $('#mainArea > div').each(function () {
