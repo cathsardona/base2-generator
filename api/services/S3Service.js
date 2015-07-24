@@ -15,31 +15,18 @@ S3Service.prototype.AWSInstance = function AWSInstance() {
 
 
 S3Service.prototype.upload = function upload(data, key, callback) {
-  var ACTION = '[upload]';
-  var AWS = require('aws-sdk');
-  var s3config = sails.config.s3.options;
-  s3config.accessKeyId = sails.config.s3.credentials.accessKeyId;
-  s3config.secretAccessKey = sails.config.s3.credentials.secretAccessKey;
-  s3 = new AWS.S3(s3config);
-  var key = key;
-  var bucket = sails.config.s3.bucket;
-  var params = {Bucket: bucket, Key: key, Body: data};
-  s3.putObject(params, function(err){
-    callback(err);
-  });
-  // var params = {
-  //   Bucket: sails.config.s3.bucket,
-  //   Key: key,
-  //   Body: data
-  // };
-  // console.log(params);
-  // this.s3.putObject(params, function (err, res) {
-  //   if (err) {
-  //     callback(err);
-  //   } else {
-  //     callback(null, true);
-  //   }
-  // }); 
+  var params = {
+    Bucket: sails.config.s3.bucket,
+    Key: key,
+    Body: data
+  };
+  this.s3.putObject(params, function (err, res) {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, true);
+    }
+  }); 
 };
 
 S3Service.prototype.config = function config() {

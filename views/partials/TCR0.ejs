@@ -1,7 +1,7 @@
 <div class='tcr0 forms col-sm-12'>
   <h4>TCR 0</h4>
   <form class='form'>
-    <div class='col-sm-4'>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='transCode'>Transaction Code</label>
         <select id='transCode' name='transCode' class='form-control'>
@@ -14,12 +14,12 @@
         </select>
       </div>
       <div class='form-group'>
-      <label for='transCodeQualifier'>Transaction Code Qualifier</label>
-      <select id='transCodeQualifier' name='transCodeQualifier' class='form-control'>
-        <option value='0'>Default</option>
-        <option value='1'>Account Funding</option>
-        <option value='2'>Original Credit</option>
-      </select>
+        <label for='transCodeQualifier'>Transaction Code Qualifier</label>
+        <select id='transCodeQualifier' name='transCodeQualifier' class='form-control'>
+          <option value='0'>Default</option>
+          <option value='1'>Account Funding</option>
+          <option value='2'>Original Credit</option>
+        </select>
       </div>
       <input type='hidden' class='form-control' id='transCompSeqNum' name='transCompSeqNum' maxlength='1' value='0'>
       <div class='form-group'>
@@ -28,7 +28,7 @@
       </div>
       <div class='form-group'>
         <label for='acctNumExt'>Account Number Extension</label>
-        <input type='text' class='form-control' id='acctNumExt' name='acctNumExt' maxlength='3'>
+        <input type='text' class='form-control' id='acctNumExt' name='acctNumExt' maxlength='3' value='000'>
       </div>
       <div class='form-group'>
         <label for='floorLimitIndicator'>Floor Limit Indicator</label>
@@ -44,10 +44,12 @@
       </div>
       <div class='form-group'>
         <label for='crb'>CRB/Exception File Indicator</label>
-        <input type='text' class='form-control' id='crb' name='crb' maxlength='1'>
+        <input type='text' class='form-control' id='crb' name='crb' maxlength='1' value=' '>
       </div>
+    </div>
+    <div class='col-sm-2'>
       <div class='form-group'>
-        <label for='pcasIndicator'>Positive Cardholder Authorization Service (PCAS) Indicator</label>
+        <label for='pcasIndicator'>PCAS Indicator</label>
         <select id='pcasIndicator' name='pcasIndicator' class='form-control'>
           <option value=' '>Unknown</option>
           <option value='N'>Authorization was not issued by PCAS</option>
@@ -59,7 +61,7 @@
       </div>
       <div class='form-group'>
         <label for='acqBusId'>Acquirer's Business ID</label>
-        <input type='text' class='form-control' id='acqBusId' name='acqBusId' maxlength='8'>
+        <input type='text' class='form-control' id='acqBusId' name='acqBusId' maxlength='8' value='00000000'>
       </div>
       <div class='form-group'>
         <label for='purchaseDate'>Purchase Date (MMDD)</label>
@@ -74,7 +76,7 @@
         <input type='text' class='form-control' id='destCurrCode' name='destCurrCode' maxlength='3'>
       </div>
     </div>
-    <div class='col-sm-4'>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='sourceAmt'>Source Amount</label>
         <input type='text' class='form-control' id='sourceAmt' name='sourceAmt' maxlength='12'>
@@ -99,12 +101,14 @@
         <label for='merchantCategoryCode'>Merchant Category Code</label>
         <input type='text' class='form-control' id='merchantCategoryCode' name='merchantCategoryCode' maxlength='4'>
       </div>
+    </div>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='merchantZipCode'>Merchant ZIP Code</label>
         <input type='text' class='form-control' id='merchantZipCode' name='merchantZipCode' maxlength='5'>
       </div>
       <div class='form-group'>
-        <label for='merchantState'>Merchant State/Province Code</label>
+        <label for='merchantState'>State/Province Code</label>
         <input type='text' class='form-control' id='merchantState' name='merchantState' maxlength='3'>
       </div>
       <div class='form-group'>
@@ -133,7 +137,7 @@
         <input type='text' class='form-control' id='reasonCode' name='reasonCode' maxlength='2'>
       </div>
     </div>
-    <div class='col-sm-4'>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='settlementFlag'>Settlement Flag</label>
         <select id='settlementFlag' name='settlementFlag' class='form-control'>
@@ -144,7 +148,7 @@
         </select>
       </div>
       <div class='form-group'>
-        <label for='authCharIndicator'>Authorization Characteristics Indicator</label>
+        <label for='authCharIndicator'>Auth Characteristics Indicator</label>
         <select id='authCharIndicator' name='authCharIndicator' class='form-control'>
           <option value=' '>Space</option>
           <option value='T'>T</option>
@@ -167,6 +171,8 @@
         <label for='cardholderIdMethod'>Cardholder ID Method</label>
         <input type='text' class='form-control' id='cardholderIdMethod' name='cardholderIdMethod' maxlength='1'>
       </div>
+    </div>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='collectionOnlyFlag'>Collection-Only Flag</label>
         <input type='text' class='form-control' id='collectionOnlyFlag' name='collectionOnlyFlag' maxlength='1'>

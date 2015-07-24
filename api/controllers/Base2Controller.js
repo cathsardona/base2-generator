@@ -1,7 +1,7 @@
 module.exports = {
 
   create: function(req, res) {
-    console.log(JSON.stringify(req.body));
+    sails.log.info(JSON.stringify(req.body));
     var transactions = req.body.transactions;
     var data = '';
 
@@ -24,9 +24,11 @@ module.exports = {
         });
       }]
     }, function(err, result) {
-      console.log('err', err);
-      console.log('result', result);
-      res.ok();
+      if (err) {
+        res.serverError();
+      } else {
+        res.ok();
+      }
     });
   }
 

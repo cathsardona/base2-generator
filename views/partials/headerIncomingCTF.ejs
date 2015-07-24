@@ -1,7 +1,7 @@
 <div class='headerIncomingCTF forms col-sm-12'>
   <h4>Incoming CTF Header</h4>
   <form class='form'>
-    <div class='col-sm-4'>
+    <div class='col-sm-2'>
       <input type='hidden' class='form-control' id='transCode' name='transCode' maxlength='2' value='90'>
       <div class='form-group'>
         <label for='processingBIN'>Processing BIN</label>
@@ -12,17 +12,19 @@
         <input type='text' class='form-control' id='processingDate' name='processingDate' maxlength='5'>
       </div>
       <input type='hidden' class='form-control' id='reserved1' name='reserved1' maxlength='6' value='      '>
+    </div>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='settlementDate'>Settlement Date (YYDDD)</label>
         <input type='text' class='form-control' id='settlementDate' name='settlementDate' maxlength='5'>
       </div>
       <input type='hidden' class='form-control' id='reserved2' name='reserved2' maxlength='2' value='  '>
-    </div>
-    <div class='col-sm-4'>
       <div class='form-group'>
         <label for='releaseNum'>Release Number</label>
         <input type='text' class='form-control' id='releaseNum' name='releaseNum' maxlength='3'>
       </div>
+    </div>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='testOption'>Test Option</label>
         <select id='testOption' name='testOption' class='form-control'>
@@ -37,9 +39,9 @@
         <label for='securityCode'>Security Code</label>
         <input type='text' class='form-control' id='securityCode' name='securityCode' maxlength='8'>
       </div>
-    </div>
-    <div class='col-sm-4'>
       <input type='hidden' class='form-control' id='reserved4' name='reserved4' maxlength='6' value='      '>
+    </div>
+    <div class='col-sm-2'>
       <div class='form-group'>
         <label for='incomingFileID'>Incoming File ID</label>
         <input type='text' class='form-control' id='incomingFileID' name='incomingFileID' maxlength='3'>
@@ -47,6 +49,6 @@
       <input type='hidden' class='form-control' id='reserved5' name='reserved5' maxlength='89' value='                                                                                         '>
       <br>
       <button type='button' id='delete' class='btn btn-danger'>Delete</button>
-    </div>
+    </div>    
   </form>
 </div>

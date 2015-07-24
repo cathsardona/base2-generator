@@ -24,6 +24,7 @@ module.exports.log = {
   *                                                                          *
   ***************************************************************************/
 
-  // level: 'info'
-
+  level: 'info',
+  timestamp: function() { return (new Date().toISOString()); }
+  
 };
